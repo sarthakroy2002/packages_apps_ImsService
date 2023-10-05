@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches: 
-      - arrow-13.1-rui2
+      - arrow-14.0
 
 jobs:
   build:
