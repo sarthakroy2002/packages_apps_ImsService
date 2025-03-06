@@ -148,8 +148,6 @@
 .method static bridge synthetic -$$Nest$msyncWfcMDN(Lcom/mediatek/ims/config/internal/ImsConfigController;)V
     .locals 0
 
-    invoke-direct {p0}, Lcom/mediatek/ims/config/internal/ImsConfigController;->syncWfcMDN()V
-
     return-void
 .end method
 
