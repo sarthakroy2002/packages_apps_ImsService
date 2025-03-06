@@ -187,21 +187,21 @@
     add-int/lit8 v2, v2, -0x1
 
     .line 843
-    new-instance v1, Lcom/motorola/android/telephony/MotoExtTelephonyManager;
+    new-instance v1, Landroid/telephony/TelephonyManager;
 
     iget-object v3, p0, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->mRil:Lcom/mediatek/ims/ril/ImsRILAdapter;
 
     iget-object v3, v3, Lcom/mediatek/ims/ril/ImsRILAdapter;->mContext:Landroid/content/Context;
 
-    invoke-direct {v1, v3}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v3}, Landroid/telephony/TelephonyManager;-><init>(Landroid/content/Context;)V
 
     .line 844
-    .local v1, "motoExtTM":Lcom/motorola/android/telephony/MotoExtTelephonyManager;
+    .local v1, "motoExtTM":Landroid/telephony/TelephonyManager;
     if-gtz v2, :cond_2
 
     iget v3, p0, Lcom/mediatek/ims/ril/MtkRadioExImsIndication;->mPhoneId:I
 
-    invoke-virtual {v1, v3}, Lcom/motorola/android/telephony/MotoExtTelephonyManager;->getAndResetInTestEmergencyCall(I)Z
+    invoke-virtual {v1, v3}, Landroid/telephony/TelephonyManager;->getAndResetInTestEmergencyCall(I)Z
 
     move-result v3
 
@@ -229,7 +229,7 @@
     invoke-virtual {v3}, Landroid/os/RegistrantList;->notifyRegistrants()V
 
     .line 853
-    .end local v1    # "motoExtTM":Lcom/motorola/android/telephony/MotoExtTelephonyManager;
+    .end local v1    # "motoExtTM":Landroid/telephony/TelephonyManager;
     :cond_2
     return-void
 
