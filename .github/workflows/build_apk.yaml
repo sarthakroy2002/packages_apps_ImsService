@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches: 
-      - arrow-14.0
+      - sixteen-qpr1-RMX2020
 
 jobs:
   build:
