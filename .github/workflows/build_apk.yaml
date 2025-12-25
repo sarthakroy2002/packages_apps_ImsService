@@ -1,20 +1,20 @@
 name: Build APK
 
 env:
-  APKTOOL_VER: 2.6.1
+  APKTOOL_VER: 2.9.3
 
 on:
   push:
     branches: 
-      - arrow-14.0
+      - sixteen-qpr2-RMX2020
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
 
-    - uses: actions/setup-java@v3
+    - uses: actions/setup-java@v5
       with:
         distribution: 'adopt-hotspot'
         java-version: '8'
@@ -27,7 +27,7 @@ jobs:
 
     - run: java -jar apktool_${{ env.APKTOOL_VER }}.jar b .
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: APK
         path: dist/ImsService.apk
